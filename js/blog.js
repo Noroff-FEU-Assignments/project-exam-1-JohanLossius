@@ -73,7 +73,7 @@ async function blogPostCall() {
                 console.log(postExcerpt);
             }
 
-            mainSectionBlog.innerHTML += ` <a href="blog-post.html?${postId}" title="${postTitle}" target="_blank" class="blog-preview">
+            mainSectionBlog.innerHTML += ` <a href="blog-post.html?postId=${postId}&postTitle=${postTitle}" title="${postTitle}" class="blog-preview">
                                                 <h3 class="blog-preview-title">${postTitle}</h3>
                                                 <img src="${imageUrl}" alt="${featuredImageDescription}" class="blog-preview-image">
                                                 <p class="blog-preview-paragraph">${postExcerpt}</p>
