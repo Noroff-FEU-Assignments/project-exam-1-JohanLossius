@@ -14,16 +14,6 @@ const carouselSection = document.querySelector(".carousel-section");
 
 const seeAllBlogPostsButton = document.querySelector(".see-more-div-blog");
 
-// rightButton.addEventListener("click", (event) => {
-//     const slideWidth = slide.clientWidth;
-//     postSlidesContainerId.scrollLeft += slideWidth;
-// });
-
-// leftButton.addEventListener("click", (event) => {
-//     const slideWidth = slide.clientWidth;
-//     postSlidesContainerId.scrollLeft -= slideWidth;
-// });
-
 /** Blog post preview code */
 
 let nrOfBlogPostsFetched = 100;
@@ -96,28 +86,12 @@ async function blogPostCall() {
                 console.log(postExcerpt);
             }
 
-            carouselDivHome.innerHTML += `   <a href="blog-post.html?postId=${postId}&postTitle=${postTitle}" title="${postTitle}" class="blog-preview-slide">
+            carouselDivHome.innerHTML += `  <a href="blog-post.html?postId=${postId}&postTitle=${postTitle}" title="${postTitle}" class="blog-preview-slide">
                                                 <h3 class="blog-preview-title-slide">${postTitle}</h3>
                                                 <img src="${imageUrl}" alt="${featuredImageDescription}" class="blog-preview-image-slide">
                                                 <p class="blog-preview-paragraph-slide">${postExcerpt}</p>
                                                 <h4 class="read-full-blog-preview-slide">[... Click to read full ...]</h4>
                                             </a>`
-
-            // postSlidesContainerId.innerHTML += `    <li class="post-slide">
-            //                                             <a href="blog-post.html?postId=${postId}&postTitle=${postTitle}" title="${postTitle}" class="blog-preview-slide">
-            //                                                 <h3 class="blog-preview-title-slide">${postTitle}</h3>
-            //                                                 <img src="${imageUrl}" alt="${featuredImageDescription}" class="blog-preview-image-slide">
-            //                                                 <p class="blog-preview-paragraph-slide">${postExcerpt}</p>
-            //                                                 <div class="read-full-blog-preview-slide">[... Click to read full ...]</div>
-            //                                             </a>
-            //                                         </li>`
-
-            // postSlidesContainerId.innerHTML += `    <a href="blog-post.html?postId=${postId}&postTitle=${postTitle}" title="${postTitle}" class="blog-preview">
-            //                                             <h3 class="blog-preview-title">${postTitle}</h3>
-            //                                             <img src="${imageUrl}" alt="${featuredImageDescription}" class="blog-preview-image">
-            //                                             <p class="blog-preview-paragraph">${postExcerpt}</p>
-            //                                             <div class="read-full-blog-preview">[... Click to read full ...]</div>
-            //                                         </a>`
 
             if (i >= breakIndex) {
                 break;

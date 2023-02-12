@@ -53,6 +53,10 @@ main {
     text-align: center;
 }
 
+.heading-subscription-section {
+    margin: 20px auto 2px auto;
+}
+
 .subscription-section {
     display: flex;
     flex-direction: column;
@@ -65,7 +69,6 @@ main {
     padding: 10px 10px;
     border-color: #F96C85;
     height: 10px;
-    margin: 5px;
     font-weight: bold;
 }
 
@@ -77,6 +80,12 @@ main {
     padding: 7.23px;
     font-weight: bold;
     color: #F96C85;
+}
+
+.newsletter-info-home {
+    margin: 8px auto;
+    font-size: small;
+    font-weight: bold;
 }
 
 .warning-note {
@@ -131,48 +140,7 @@ main {
     height: auto;
 }
 
-/* 
-.carousel-container-home {
-    margin: 1rem;
-    position: relative;
-    overflow: hidden;
-} */
-
-  .post-slides-container {
-    /* height: calc(50vh - 2rem); */
-    /* width: 100%;
-    display: flex; */
-    /* list-style: none; */
-    /* margin: 0;
-    padding: 0;
-    overflow: scroll;
-    scroll-behavior: smooth;
-    scrollbar-width: none; */
-    /* min-height: 500px; */
-  }
-
-  .post-slide {
-    /* width: 25%; */
-    /* flex: 1;
-    border: solid;
-    border-color: #F96C85;
-    background-color: #F5F1F1;
-    border-radius: 25px;
-    border-width: 3px;
-    text-align: center;
-    margin: 5px;
-    min-height: 250px; */
-    /* min-height: 490px; */
-  }
-/* 
-  .blog-preview-image-slide {
-    max-width: 250px;
-    height: auto;
-    max-height: 250px;
-  } */
-
   .slide-arrow {
-    /* position: absolute; */
     top: 0;
     bottom: 0;
     height: 6rem;
@@ -182,8 +150,7 @@ main {
     width: 3.5rem;
     font-size: 3.8rem;
     cursor: pointer;
-    opacity: 0.5;
-    /* transition: opacity 100ms; */
+    opacity: 0.6;
     color:#F96C85;
     font-weight: bold;
   }
@@ -206,16 +173,11 @@ main {
     border-radius: 0 2rem 2rem 0;
     margin: auto auto auto 0;
   } 
-
-  /* .blog-preview-slide {
-    padding: 8px;
-  }
-
-  .read-full-blog-preview {
-    font-size: medium;
-    font-weight: bold;
-    text-align: center;
-  } */
+ 
+.latest-posts-heading-home {
+    margin: 20px auto 0 auto;
+    font-size: xx-large;
+}
   
 /** Learning **/
 
@@ -240,11 +202,6 @@ main {
 
 .learning-topic h3, .learning-topic h4, .learning-topic  {
     text-align: center;
-}
-
-.latest-posts-heading-home {
-    margin: 100px auto 0 auto;
-    font-size: xx-large;
 }
 
 /** About **/
@@ -486,6 +443,69 @@ main {
     margin: 15px 50px 50px 50px;
 }
 
+/** Test test test blog specific modal image **/
+
+ /* Style the Image Used to Trigger the Modal */
+ #modal-image-id {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal-div-class {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (Image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 /** Header **/
 
 header {
@@ -571,7 +591,6 @@ footer {
 .social-item {
     margin: 20px 20px 20px 0;
     max-width: 3rem;
-
 }
 
 .social-icon {
@@ -620,7 +639,6 @@ footer {
     .blog-specific-post-cont {
         margin: 15px 35px;
     }
-
 }
 
 @media (max-width: 849px) {
@@ -637,7 +655,6 @@ footer {
         height: auto;
         min-height: 500px;
     }
-
 }
 
 @media (max-width: 799px) {
@@ -696,9 +713,7 @@ footer {
     .blog-preview-slide {
         width: 90%;
     }
-
 }
-
 
 @media (max-width: 599px) {
     .blog-preview {
@@ -749,14 +764,12 @@ footer {
     .blog-preview {
         width: 350px;
     }
-
 }
 
 @media (max-width: 399px) {
     .blog-preview {
         width: 290px;
     }
-
 }
 
 @media (max-width: 299px) {
@@ -768,5 +781,4 @@ footer {
     .blog-preview {
         width: 250px;
     }
-
 }

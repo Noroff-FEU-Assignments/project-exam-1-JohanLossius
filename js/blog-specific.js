@@ -19,6 +19,7 @@ const urlSpecificPost = `https://productpassion.no/Productpassion/wp-json/wc/sto
 const mainPostTitle = document.querySelector(".main-nav__title");
 const introNavCont = document.querySelector(".main-nav__orientation");
 const mainSectionBlogPost = document.querySelector(".main-section-blog-post");
+const title = document.querySelector(".page-title");
 
 async function postCall() {
     try {
@@ -72,14 +73,15 @@ async function postCall() {
             console.log(postText);
         }
 
+        title.innerHTML = `${postTitle} | Product Passion`;
         introNavCont.innerHTML = `You are here: <a href="index.html" class="product-passion-nav" title="Home">Product Passion</a> -> <a href="blog.html" class="product-passion-nav" title="Blog" >Blog</a> -> <a href="blog-post.html?postId=${postId}&postTitle=${postTitle}" class="product-passion-nav" title="${postTitle}">${postTitle}</a>`;
 
         // mainPostTitle.innerHTML = `${postTitle}`;
 
-        mainSectionBlogPost.innerHTML = `   <div class="blog-specific-post-cont">
+        mainSectionBlogPost.innerHTML += `   <div class="blog-specific-post-cont">
                                                 <h2 class="blog-specific-post-title">${postTitle}</h2>
                                                 <div class="bloc-specific-image-div">
-                                                    <img src="${imageUrl}" alt="${featuredImageDescription}" class="blog-specific-image">
+                                                    <img src="${imageUrl}" alt="${featuredImageDescription}" class="blog-specific-image modal-class" id="modal-image-id">
                                                 </div>
                                                 <div class="blog-specific-post-text">${postText}</div>
                                             </div>`
@@ -90,3 +92,25 @@ async function postCall() {
 };
 
 postCall();
+
+// Select the modal div
+const modal = document.getElementById("modal-div-id");
+console.log(modal);
+
+// Get the image and insert it inside the modal
+const img = document.getElementById("modal-image-id");
+const modalImg = document.getElementById("img01");
+// img.onclick = function(){
+// modal.style.display = "block";
+// modalImg.src = this.src;
+// }
+
+// Close modal when click outside the modal image
+// window.onclick = function(event) {
+//     let classNameClick = event.target.className;
+//     console.log(classNameClick);
+
+//     if (classNameClick === "modal-div-class" || classNameClick === "close") {
+//       modal.style.display = "none";
+//     }
+// };
