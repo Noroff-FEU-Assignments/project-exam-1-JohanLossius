@@ -76,8 +76,6 @@ async function postCall() {
         title.innerHTML = `${postTitle} | Product Passion`;
         introNavCont.innerHTML = `You are here: <a href="index.html" class="product-passion-nav" title="Home">Product Passion</a> -> <a href="blog.html" class="product-passion-nav" title="Blog" >Blog</a> -> <a href="blog-post.html?postId=${postId}&postTitle=${postTitle}" class="product-passion-nav" title="${postTitle}">${postTitle}</a>`;
 
-        // mainPostTitle.innerHTML = `${postTitle}`;
-
         mainSectionBlogPost.innerHTML += `   <div class="blog-specific-post-cont">
                                                 <h2 class="blog-specific-post-title">${postTitle}</h2>
                                                 <div class="bloc-specific-image-div">
@@ -93,13 +91,16 @@ async function postCall() {
 
 postCall();
 
+
+// Code below does not work until dynamically created HTML elements are appended to DOM. I needed more time to figure out how to do this, before I can implement the modal image dynamically. See test-blog-blog.html for modal image implemented without using dynamical HTML/JS.
+
 // Select the modal div
-const modal = document.getElementById("modal-div-id");
-console.log(modal);
+// const modal = document.getElementById("modal-div-id");
+// console.log(modal);
 
 // Get the image and insert it inside the modal
-const img = document.getElementById("modal-image-id");
-const modalImg = document.getElementById("img01");
+// const img = document.getElementById("modal-image-id");
+// const modalImg = document.getElementById("img01");
 // img.onclick = function(){
 // modal.style.display = "block";
 // modalImg.src = this.src;
