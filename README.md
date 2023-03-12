@@ -26,12 +26,12 @@ The site consists of three general parts:
 <h2>Main design tools used:</h2>
 <ul>
     <li>Adobe XD</li>
-    <li>Wix Logo Maker (for quick logo and design inspirations)</li>
+    <li>Wix Logo Maker for logo and design inspirations</li>
 </ul>
 
   <h2>Getting started with the development:</h2>
   <ins>Clone the repo from GitHub via GitHub Desktop:</ins>
-  <p>clone https://github.com/JohanLossius/JohanLossius.git</p>
+  <p>clone https://github.com/Noroff-FEU-Assignments/project-exam-1-JohanLossius.git</p>
 
   <ins>And then install it:</ins>
   <p>If you are using GitHub Desktop and Visual Studio Code editor, simply launch and install it via GitHub Desktop by pulling it from the GitHub repo and follow the instructions of the program until you're setup in Visual Studio Code.</p>
